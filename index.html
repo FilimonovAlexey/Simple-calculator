@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <title>Калькулятор</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Calculator</h1>
+      <!--поле ввода первого числа-->
+      <div class="inputNumbers">
+        <input id="num1" type="number" placeholder="#" autocomplete="off" />
 
-    <!--<link rel="stylesheet" href="./styles/style.css">-->
+        <!--блок с кнопками-->
+        <div id="operator_btns">
+          <button class="btnOperator" id="plus" onclick="op='+'">&plus;</button>
+          <button class="btnOperator" id="minus" onclick="op='-'">
+            &minus;
+          </button>
+          <button class="btnOperator" id="times" onclick="op='*'">
+            &times;
+          </button>
+          <button class="btnOperator" id="divide" onclick="op='/'">
+            &divide;
+          </button>
+        </div>
 
-</head>
-<body>
-    <!--поле ввода первого числа-->
-    <input id="num1" />
+        <!--поле ввода второго числа-->
+        <input id="num2" type="number" placeholder="#" autocomplete="off" />
+      </div>
 
-    <!--блок с кнопками-->
-    <div id="operator_btns">
-        <button id="plus" onclick="op='+'">+</button>
-        <button id="minus" onclick="op='-'">-</button>
-        <button id="times" onclick="op='*'">x</button>
-        <button id="divide" onclick="op='/'">:</button>
+      <!--кнопка для расчетов-->
+      <button class="button" onclick="func()">Посчитать</button>
+
+      <!--здесь будет результат-->
+      <p id="result">=</p>
     </div>
-
-    <!--поле ввода второго числа-->
-    <input id="num2" />
-    <br>
-
-    <!--кнопка для расчетов-->
-    <button onclick="func()">Посчитать</button>
-
-    <!--здесь будет результат-->
-    <p id="result"></p>
-    
     <script src="./scripts/index.js"></script>
-</body>
+  </body>
 </html>
